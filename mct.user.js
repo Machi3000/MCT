@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       MCT
-// @version    0.0.1
+// @version    0.0.2
 // @author     Ma c'hi (mush@machi.tel)
 // @description  Modifications de Mush.vg
 // @grant      GM_xmlhttpRequest
@@ -24,7 +24,7 @@
 var $ = unsafeWindow.jQuery;
 var Main = unsafeWindow.Main;
 
-var version = '0.0.1';
+var version = '0.0.2';
 
 /**
  * Userscript global tools
@@ -148,19 +148,15 @@ function m_popin(title,message,button) {
 function m_thisInit() {
 	var html = ''
     +'<p style="float:right;opacity:0.4;"><a href="http://mush.blablatouar.com/castingtools/index.php" target="_blank">v '+version+'</a></p>'
-    +'<h3><img src="http://www.hordes.fr/gfx/forum/smiley/h_shaman.gif" /> Mush Casting Tools</h3>'
+    +'<h3><img src="http://mush.vg/img/icons/ui/ticket.png" /> Mush Casting Tools</h3>'
     +'<span id="m_ct_details"></span>'
     +'';
-    m_addTab('ct','http://mush.vg/img/icons/ui/pa_eng.png',html,'Mush Casting Tools');
+    m_addTab('ct','http://mush.vg/img/icons/ui/ticket.png',html,'Mush Casting Tools');
     
     
     
-	$('#m_ct_details').html('<strong>Bienvenue dans Mush Casting Tools</strong><br />'
-	+''
-	+''
-	+''
-	+''
-	+''
+	$('#m_ct_details').html('<br /><img src="http://mush.vg/img/icons/ui/pa_comp.png" /> <strong>Vous n\'êtes pas connecté.</strong><br />'
+	+'<a href="http://mush.blablatouar.com/castingtools/index.php">Se connecter ...</a>'
 	+'');
 
 }
