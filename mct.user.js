@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name       MCT
-// @version    0.0.3
+// @version    0.0.4
 // @author     Ma c'hi (mush@machi.tel)
 // @description  Modifications de Mush.vg
 // @grant      GM_xmlhttpRequest
 // @match      http://mush.vg
 // @match      http://mush.vg/*
 // @match      http://mush.vg/#
-// @exclude    http://mush.vg/g/*
+// @match      http://mush.vg/g/*
+// @match      http://mush.vg/group/*
 // @exclude    http://mush.vg/gold/*
-// @exclude    http://mush.vg/group/*
 // @exclude    http://mush.vg/help
 // @exclude    http://mush.vg/help*
 // @exclude    http://mush.vg/me
@@ -24,7 +24,7 @@
 var $ = unsafeWindow.jQuery;
 var Main = unsafeWindow.Main;
 
-var version = '0.0.3';
+var version = '0.0.4';
 
 /**
  * Userscript global tools
@@ -152,6 +152,17 @@ function m_thisInit() {
     +'<span id="m_ct_details"></span>'
     +'';
     m_addTab('ct','http://mush.vg/img/icons/ui/ticket.png',html,'Mush Casting Tools');
+    
+    var u_nick = $('#tid_openRight .tid_name').text();
+    var u_nick2 = $('#tid_sidePanel_user .tid_sideHeader span').text();
+    var u_nick3 = $('#tid_sidePanel_user .tid_actions a:first-sibling span').text();
+    var u_url = $('#tid_openRight').attr('href');
+    var u_url2 = $('#tid_sidePanel_user .tid_actions a:first-sibling').attr('href');
+    
+    console.log('nick = '+u_nick+' '+u_nick2+' '+u_nick3+' ');
+    console.log('url = '+u_url+' '+u_url2+' ');
+    
+    
     
     
     
