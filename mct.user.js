@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       MCT
-// @version    0.0.2
+// @version    0.0.3
 // @author     Ma c'hi (mush@machi.tel)
 // @description  Modifications de Mush.vg
 // @grant      GM_xmlhttpRequest
@@ -24,7 +24,7 @@
 var $ = unsafeWindow.jQuery;
 var Main = unsafeWindow.Main;
 
-var version = '0.0.2';
+var version = '0.0.3';
 
 /**
  * Userscript global tools
@@ -155,8 +155,9 @@ function m_thisInit() {
     
     
     
-	$('#m_ct_details').html('<br /><img src="http://mush.vg/img/icons/ui/pa_comp.png" /> <strong>Vous n\'êtes pas connecté.</strong><br />'
-	+'<a href="http://mush.blablatouar.com/castingtools/index.php">Se connecter ...</a>'
+	$('#m_ct_details').html('<strong>Bienvenue !</strong><br />'
+	+'Avant toute chose, je dois identifier le ou les castings dont vous faites partie.'
+	+'Merci de vous rendre sur la page "Studio" de votre Casting.'
 	+'');
 
 }
